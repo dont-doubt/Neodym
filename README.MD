@@ -102,7 +102,7 @@ You can leave an **issue** or a **question** by following link:
 Thanks for everyone who will help us to contribute our project.
 
 > [!NOTE]
-> <ins>**Neodym**</ins> uses [Lombok](https://projectlombok.org/) annotation processor in code
+> <ins>**Neodym**</ins> uses [**Lombok**](https://projectlombok.org/) annotation processor in code
 
 
 ## Special thanks to:
