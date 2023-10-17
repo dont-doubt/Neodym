@@ -26,7 +26,7 @@
 > to compile get both `fragment` and `vector` **GLSL** shader representations as String
 
 ## Why <ins>Neodym</ins>?
-<ins>**Neodym**</ins> is just much more flexible and readable language rather than GLSL.<br>
+<ins>**Neodym**</ins> is just much more flexible and readable language rather than **GLSL**.<br>
 
 ### GLSL do have some annoying syntax flaws. So, we decided to fix them:
 We have replaced<br>
