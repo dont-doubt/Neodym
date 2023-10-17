@@ -11,7 +11,7 @@
 > For now, <ins>**Neodym**</ins> shader language compiler is written only in **Java**<br>
 > You can use this code in **Java**:
 > ```java
-> String code = /*...*/
+> String code = /* ... Code in Neodym shader language */
 > 
 > NeodymResult result = Neodym.compile(code);
 > String fragment = result.getFragmentShader();
@@ -19,11 +19,11 @@
 > ```
 > And this code in **Kotlin**:
 > ```kotlin
-> val code: String = /*...*/
+> val code: String = /* ... Code in Neodym shader language */
 > 
 > val (fragment, vector) = Neodym.compile(code)
 > ```
->
+> to compile get both `fragment` and `vector` **GLSL** shader representations as String
 
 ## Why <ins>Neodym</ins>?
 <ins>**Neodym**</ins> is just much more flexible and readable language rather than GLSL.<br>
