@@ -25,7 +25,7 @@
 > ```
 > to compile get both `fragment` and `vector` **GLSL** shader representations as String
 
-## Why <ins>Neodym</ins>?
+# Why <ins>Neodym</ins>?
 <ins>**Neodym**</ins> is just much more flexible and readable language rather than **GLSL**.<br>
 
 ### GLSL do have some annoying syntax flaws. So, we decided to fix them:
@@ -80,11 +80,10 @@ main {
  
 <br>
 
-## Have a <ins>question</ins>? Got an <ins>issue</ins>?
+# Have a <ins>question</ins>? Got an <ins>issue</ins>?
 You can leave an **issue** or a **question** by following link:<br>
 [&lt;Click Here&gt;](https://github.com/manifold-systems/manifold/issues)
 
----
 # <ins>Author</ins>
 
 > ### rivta (GitHub: [@dont-doubt](https://github.com/dont-doubt))
