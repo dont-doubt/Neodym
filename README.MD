@@ -28,8 +28,7 @@
 ## Why <ins>Neodym</ins>?
 <ins>**Neodym**</ins> is just much more flexible and readable language rather than GLSL.<br>
 
----
-## GLSL syntax do have some annoying flaws. So, we decided to fix them:
+### GLSL do have some annoying syntax flaws. So, we decided to fix them:
 We have replaced<br>
 
 |   1   |   2   |   3   |   4   |
@@ -55,8 +54,8 @@ be compiled to `#version 330`, so
 > _This chapter is not finished yet..._
 
 <br>
----
 
+---
 ## Examples
 The shader might be optionally used with single `vector` statement to declare vector 
 shader behaviour:
