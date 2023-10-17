@@ -1,8 +1,13 @@
 # <ins>Neodym</ins> - Unique shader language compiling to GLSL shader
 
 ---
+
+<br>
+
 ## What is <ins>Neodym</ins>?
 <ins>**Neodym**</ins> is a new programming language. It can be compiled into GLSL shaders.
+
+<br>
 
 > [!IMPORTANT]
 > <ins>**Neodym**</ins> shader language uses `.neo` file extension.<br>
