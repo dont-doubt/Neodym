@@ -1,4 +1,4 @@
-# <ins>Neodym</ins> - Unique shader language compiling to GLSL shader
+# <ins>Neodym</ins> - Unique Modern shader language compiling to GLSL shader
 
 ---
 
@@ -29,6 +29,8 @@
 > val (fragment, vector) = Neodym.compile(code)
 > ```
 > to compile get both `fragment` and `vector` **GLSL** shader representations as String
+
+<br>
 
 # Why <ins>Neodym</ins>?
 <ins>**Neodym**</ins> is just much more flexible and readable language rather than **GLSL**.<br>
