@@ -81,13 +81,15 @@ main {
 <br>
 
 # Have a <ins>question</ins>? Got an <ins>issue</ins>?
-You can leave an **issue** or a **question** by following link:<br>
-[&lt;Click Here&gt;](https://github.com/manifold-systems/manifold/issues)
+You can leave an **issue** or a **question** by following link:
+[**&lt;Click Here&gt;**](https://github.com/manifold-systems/manifold/issues)
 
 # <ins>Author</ins>
 
 > ### rivta (GitHub: [@dont-doubt](https://github.com/dont-doubt))
 > <i></i>
+
+<br>
 
 ## Contibuting <ins>Neodym</ins> language:
 Thanks for everyone who will help us to contribute our project.
