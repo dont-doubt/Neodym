@@ -56,6 +56,7 @@ be compiled to `#version 330`, so
 
 <br>
 ---
+
 ## Examples
 The shader might be optionally used with single `vector` statement to declare vector 
 shader behaviour:
