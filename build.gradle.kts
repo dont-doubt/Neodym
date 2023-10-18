@@ -32,17 +32,17 @@ java {
     }
 }
 
-tasks.processResources {
-    includeEmptyDirs = false
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-}
-
 
 /*
  * ================================
  *  Tasks
  * ================================
  */
+
+tasks.processResources {
+    includeEmptyDirs = false
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
 
 tasks.test {
     useJUnitPlatform()
