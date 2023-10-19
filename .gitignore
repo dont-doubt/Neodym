@@ -1,10 +1,13 @@
-.gradle
-build/
-
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
+# IntelliJ IDEA
+.idea/httpRequests/
 .idea/libraries/
 .idea/shelf/
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/modules.xml
 .idea/workspace.xml
-.idea/httpRequests/
+
+# Others
+.gradle/
+build/
+src/gen/
