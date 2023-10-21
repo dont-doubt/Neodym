@@ -2,9 +2,14 @@
 .idea/httpRequests/
 .idea/libraries/
 .idea/shelf/
+.idea/modules/
+
 .idea/compiler.xml
 .idea/jarRepositories.xml
+.idea/gradle.xml
+.idea/misc.xml
 .idea/modules.xml
+.idea/uiDesigner.xml
 .idea/workspace.xml
 
 # Others
