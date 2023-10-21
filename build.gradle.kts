@@ -12,6 +12,8 @@ plugins {
 group = "neodym"
 version = "1.0.0"
 
+val targetGroup = "neodym tasks"
+
 layout.buildDirectory = file("build")
 
 val mainFolder = file("src/main")
@@ -58,6 +60,14 @@ sourceSets {
     }
 }
 
+gradle.projectsEvaluated {
+    tasks.all {
+        if (group != targetGroup) {
+            group = "other"
+        }
+    }
+}
+
 /*
  * ================================
  *  Tasks
@@ -79,19 +89,27 @@ tasks.withType<JavaCompile> {
 }
 
 tasks.generateGrammarSource {
+    group = targetGroup
     maxHeapSize = "128m"
-    arguments.addAll("-Werror", "-long-messages")
-    
-
-//    val pkg = "neodym.antlr"
-//    arguments.addAll("-package", pkg, "-Werror", "-long-messages")
-//    outputDirectory = outputDirectory.resolve(pkg.split(".").joinToString("/"))
+    source = fileTree(mainFolder) {
+        include("**/*.g4")
+    }
+    arguments.addAll("-Werror", "-long-messages", "-package", "neodym.antlr")
+    doLast {
+        genFolder.deleteRecursively()
+        file("build/generated-src/antlr/main").delete()
+        file("build/generated-src/antlr").renameTo(genFolder)
+    }
 }
 
 tasks.clean {
     doLast {
         genFolder.deleteRecursively()
     }
+}
+
+tasks.compileJava {
+    dependsOn(tasks.generateGrammarSource)
 }
 
 
@@ -109,6 +127,4 @@ fun DependencyHandlerScope.compileTime(dependency: String) {
     compileOnly(dependency)
     testImplementation(dependency)
 }
-fun <T> MutableCollection<in T>.addAll(vararg elements: T) {
-    addAll(elements)
-}
+fun <T> MutableCollection<in T>.addAll(vararg elements: T) { addAll(elements) }

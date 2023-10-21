@@ -10,4 +10,4 @@
 # Others
 .gradle/
 build/
-src/gen/
+#src/gen/
