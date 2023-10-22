@@ -1,0 +1,10 @@
+
+uniform int2 hello
+uniform int4 value
+
+main {
+}
+
+void maifn(int i, j, k, float j) {
+
+}

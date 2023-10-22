@@ -22,8 +22,9 @@ public class Neodym {
      * A method to compile Neodym code to GLSL shaders
      *
      * @return {@link neodym.Neodym} instance
+     * @throws {@link neodym.NeodymCompileException} if unable to compile code
      */
-    public static Neodym compile(String code) {
+    public static Neodym compile(String code) throws NeodymCompileException {
         return NeodymCompiler.compile(code);
     }
 

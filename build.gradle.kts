@@ -78,6 +78,9 @@ tasks.processResources {
     includeEmptyDirs = false
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     exclude("**/*.java")
+    exclude("neodym/antlr/*")
+    include("neodym/antlr/*.java")
+    include("neodym/antlr/*.tokens")
 }
 
 tasks.test {
@@ -98,6 +101,9 @@ tasks.generateGrammarSource {
     doLast {
         genFolder.deleteRecursively()
         file("build/generated-src/antlr/main").delete()
+        fileTree("build/generated-src/antlr") {
+            include("**/*.interp")
+        }.forEach { it.delete() }
         file("build/generated-src/antlr").renameTo(genFolder)
     }
 }

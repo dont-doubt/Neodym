@@ -18,7 +18,7 @@
 > ```java
 > String code = /* ... Code in Neodym shader language */
 > 
-> NeodymResult result = Neodym.compile(code);
+> Neodym result = Neodym.compile(code);
 > String fragment = result.getFragmentShader();
 > String vector = result.getVectorShader();
 > ```
