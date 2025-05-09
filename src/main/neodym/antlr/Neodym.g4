@@ -26,8 +26,8 @@ mainFunc
 
 
 funcBody
-    : '{' (expr | NL)* '}'
-    | ASSIGN expr
+    : '{' (statement | NL)* '}'
+    | ASSIGN statement
     ;
 
 params
@@ -42,13 +42,28 @@ typedParam
     : type Identifier
     ;
 
-
-expr
-    : expr1 optSeparator
+statement
+    : statement1 optSeparator
     ;
 
-expr1
-    : Identifier
+statement1
+    : variableAccess opPriority7 expr
+    ;
+
+expr
+    : '(' expr ')'
+    | expr opPriority1 expr
+    | expr opPriority2 expr
+    | expr opPriority3 expr
+    | expr opPriority4 expr
+    | expr opPriority5 expr
+    | expr opPriority6 expr
+    | <assoc=right> expr opPriority7 expr
+    | Identifier
+    ;
+
+variableAccess
+    : Identifier (DOT Identifier)*
     ;
 
 // uniform int3 mask
@@ -56,8 +71,17 @@ uniform
     : Uniform type Identifier
     ;
 
+// out@1 int3 name
+inout
+    : (Out | In) (At Number)?
+    ;
+
 optSeparator
     : NL | ';'
+    ;
+
+number
+    : [0-9]+ (DOT [0-9]*)?
     ;
 
 /*
@@ -71,6 +95,9 @@ optSeparator
 Uniform: 'uniform' ;
 In: 'in' ;
 Out: 'out' ;
+Return: 'return' ;
+Break: 'break' ;
+GoTo: 'goto' ;
 
 
 // Types
@@ -161,6 +188,36 @@ Shadowcube: 'shadowcube' ;
 
 // Operators
 
+opPriority1
+    : POW
+    ;
+
+opPriority2
+    : DIVIDE | MULT | MOD
+    ;
+
+opPriority3
+    : PLUS | MINUS
+    ;
+
+opPriority4
+    : EQUAL | NOT_EQUAL | GREATER | LESSER
+    | GREATER_EQ | LESSER_EQ
+    ;
+
+opPriority5
+    : AND
+    ;
+
+opPriority6
+    : OR
+    ;
+
+opPriority7
+    : ASSIGN | A_PLUS | A_MINUS | A_MULT
+    | A_DIVIDE | A_POW
+    ;
+
 PLUS: '+' ;
 MINUS: '-' ;
 MULT: '*' ;
@@ -192,6 +249,8 @@ OR: '||' ;
 
 DOT: '.' ;
 COMMA: ',' ;
+COLON: ':' ;
+AT: '@' ;
 
 
 // Identifiers

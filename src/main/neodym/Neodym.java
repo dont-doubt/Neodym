@@ -25,6 +25,7 @@ public class Neodym {
      * @throws {@link neodym.NeodymCompileException} if unable to compile code
      */
     public static Neodym compile(String code) throws NeodymCompileException {
+        boolean b = 1 + 2 == 3 + 4;
         return NeodymCompiler.compile(code);
     }
 
