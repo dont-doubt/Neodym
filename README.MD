@@ -91,11 +91,6 @@ main {
 You can leave an **issue** or a **question** by following link:
 [**&lt;Click Here&gt;**](https://github.com/manifold-systems/manifold/issues)
 
-# <ins>Author</ins>
-
-> ### rivta (GitHub: [@dont-doubt](https://github.com/dont-doubt))
-> <i></i>
-
 <br>
 
 ## Contibuting <ins>Neodym</ins> language:
